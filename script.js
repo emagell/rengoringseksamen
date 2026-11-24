@@ -1,73 +1,105 @@
 let currentQuestion = 0;
 let xp = 0;
 
-const questionElement =
-document.getElementById("question");
+function loadQuestion(){
 
-questionElement.textContent =
-questions[currentQuestion].question;
+    if(currentQuestion >= questions.length){
 
-function checkAnswer() {
+        document.getElementById("question").innerHTML =
+        "🎉 Eksamen færdig!";
 
-    const userAnswer =
-    document.getElementById("answer")
-    .value
-    .toLowerCase();
+        document.getElementById("options").innerHTML =
+        "";
 
-    const correct =
-    questions[currentQuestion]
-    .answers
-    .some(answer =>
-        userAnswer.includes(answer)
-    );
+        document.getElementById("result").innerHTML =
+        `Samlet XP: ${xp}`;
 
-    const result =
-    document.getElementById("result");
+        document.getElementById("correctAnswer").innerHTML =
+        "";
 
-    if(correct) {
+        document.getElementById("explanation").innerHTML =
+        "";
 
-        result.textContent =
+        document.getElementById("nextButton").style.display =
+        "none";
+
+        return;
+    }
+
+    const q = questions[currentQuestion];
+
+    document.getElementById("question").innerHTML =
+    q.question;
+
+    let html = "";
+
+    q.options.forEach((option,index)=>{
+
+        html += `
+        <button onclick="checkAnswer(${index})">
+            ${option}
+        </button>
+        <br>
+        `;
+    });
+
+    document.getElementById("options").innerHTML =
+    html;
+}
+
+function checkAnswer(choice){
+
+    const q =
+    questions[currentQuestion];
+
+    const buttons =
+    document.querySelectorAll("#options button");
+
+    buttons.forEach(button => {
+        button.disabled = true;
+    });
+
+    if(choice === q.correct){
+
+        document.getElementById("result").innerHTML =
         "✅ Korrekt! +10 XP";
 
         xp += 10;
 
-    } else {
+    }else{
 
-        result.textContent =
+        document.getElementById("result").innerHTML =
         "❌ Forkert";
     }
 
-    document.getElementById("xp")
-    .textContent = xp;
+    document.getElementById("correctAnswer").innerHTML =
+    "Rigtigt svar: " +
+    q.options[q.correct];
+
+    document.getElementById("explanation").innerHTML =
+    q.explanation;
+
+    document.getElementById("xp").innerHTML =
+    xp;
+
+    document.getElementById("nextButton").style.display =
+    "inline-block";
+}
+
+function nextQuestion(){
 
     currentQuestion++;
 
-    if(currentQuestion < questions.length) {
+    document.getElementById("result").innerHTML = "";
 
-        setTimeout(() => {
+    document.getElementById("correctAnswer").innerHTML = "";
 
-            questionElement.textContent =
-            questions[currentQuestion]
-            .question;
+    document.getElementById("explanation").innerHTML = "";
 
-            document
-            .getElementById("answer")
-            .value = "";
+    document.getElementById("nextButton").style.display =
+    "none";
 
-            result.textContent = "";
-
-        }, 1000);
-
-    } else {
-
-        setTimeout(() => {
-
-            questionElement.textContent =
-            "🎉 Eksamen færdig!";
-
-            result.textContent =
-            "Samlet XP: " + xp;
-
-        }, 1000);
-    }
+    loadQuestion();
 }
+
+loadQuestion();
