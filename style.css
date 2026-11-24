@@ -1,9 +1,10 @@
 body{
     background:#111;
     color:white;
-    font-family:Arial, sans-serif;
+    font-family:Arial,sans-serif;
     text-align:center;
     padding:40px;
+    transition:all .3s ease;
 }
 
 .card{
@@ -12,6 +13,10 @@ body{
     margin:auto;
     padding:30px;
     border-radius:20px;
+
+    min-height:650px;
+
+    transition:all .3s ease;
 }
 
 #options button{
@@ -33,11 +38,30 @@ body{
     cursor:pointer;
 
     font-size:16px;
+
+    transition:.2s;
 }
 
 #options button:hover{
 
     background:#444;
+}
+
+#feedback{
+
+    min-height:180px;
+
+    margin-top:20px;
+}
+
+#correctAnswer{
+
+    color:#ffd166;
+}
+
+#explanation{
+
+    color:#90ee90;
 }
 
 #nextButton{
@@ -64,18 +88,4 @@ body{
 #nextButton:hover{
 
     background:#2563eb;
-}
-
-#correctAnswer{
-
-    color:#ffd166;
-
-    margin-top:15px;
-}
-
-#explanation{
-
-    color:#90ee90;
-
-    margin-top:15px;
 }
