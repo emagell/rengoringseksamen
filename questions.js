@@ -169,7 +169,130 @@ explanation:"Mindre kemi er bedre for miljø, økonomi og arbejdsmiljø."
 
 ],
 
-surfaces: [],
+surfaces: [
+
+{
+question:"Hvilket gulv tåler dårligt store mængder vand?",
+options:[
+"Linoleum",
+"Klinker",
+"Beton",
+"Rustfrit stål"
+],
+correct:0,
+explanation:"Linoleum kan tage skade af for meget vand."
+},
+
+{
+question:"Hvilket materiale bør man være forsigtig med at bruge stærk alkali på?",
+options:[
+"Linoleum",
+"Klinker",
+"Vinyl",
+"Beton"
+],
+correct:0,
+explanation:"Linoleum kan nedbrydes af stærk alkali."
+},
+
+{
+question:"Hvilket materiale findes ofte i vådrum?",
+options:[
+"Klinker",
+"Pap",
+"Linoleum",
+"Tæppe"
+],
+correct:0,
+explanation:"Klinker bruges ofte i vådrum."
+},
+
+{
+question:"Hvorfor skal man kende gulvtypen før rengøring?",
+options:[
+"For at vælge korrekt metode",
+"For at vælge korrekt kemi",
+"For at undgå skader",
+"Alle ovenstående"
+],
+correct:3,
+explanation:"Gulvtypen afgør valg af metode og kemi."
+},
+
+{
+question:"Hvilket gulv behandles ofte med polish?",
+options:[
+"Linoleum",
+"Klinker",
+"Beton",
+"Stål"
+],
+correct:0,
+explanation:"Linoleum beskyttes ofte med polish."
+},
+
+{
+question:"Hvad er et tegn på slidt polish?",
+options:[
+"Matte områder",
+"Mere glans",
+"Mørkere farve",
+"Ingen ridser"
+],
+correct:0,
+explanation:"Slidt polish fremstår ofte mat."
+},
+
+{
+question:"Hvad skal man gøre før ny polish lægges?",
+options:[
+"Kontrollere pH",
+"Rengøre gulvet",
+"Lade gulvet tørre",
+"Alle ovenstående"
+],
+correct:3,
+explanation:"Gulvet skal være rent, tørt og neutralt."
+},
+
+{
+question:"Hvilken overflade tåler typisk syre bedst?",
+options:[
+"Klinker",
+"Linoleum",
+"Træ",
+"Kork"
+],
+correct:0,
+explanation:"Klinker tåler generelt syre bedre."
+},
+
+{
+question:"Hvorfor tester man ny pad på et lille område?",
+options:[
+"For at undgå skader",
+"For at spare strøm",
+"For at få mere glans",
+"For at bruge mindre kemi"
+],
+correct:0,
+explanation:"Man tester for at beskytte gulvet."
+},
+
+{
+question:"Hvad kan ridser i polish skyldes?",
+options:[
+"Slid",
+"Trafik",
+"Forkert vedligeholdelse",
+"Alle ovenstående"
+],
+correct:3,
+explanation:"Ridser kan opstå af flere årsager."
+}
+
+],
+
 hygiene: [],
 sanitary: [],
 machines: [],
