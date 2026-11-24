@@ -295,7 +295,190 @@ explanation:"Ridser kan opstå af flere årsager."
 
 hygiene: [],
 sanitary: [],
-machines: [],
+machines: [
+
+{
+question:"Hvad bruges en rød pad typisk til?",
+options:[
+"Let rengøring",
+"Grov afrensning",
+"Fjernelse af beton",
+"Kun polering"
+],
+correct:0,
+explanation:"Røde pads bruges ofte til lettere rengøring og vedligeholdelse."
+},
+
+{
+question:"Hvad bruges en sort pad typisk til?",
+options:[
+"Grov afrensning",
+"Polering",
+"Voksning",
+"Støvsugning"
+],
+correct:0,
+explanation:"Sort pad er en af de mest aggressive pads."
+},
+
+{
+question:"Hvad er formålet med en vandsuger?",
+options:[
+"Opsuge vand",
+"Polere gulve",
+"Påføre polish",
+"Afkalke toiletter"
+],
+correct:0,
+explanation:"Vandsugeren bruges til at opsuge vand og snavs."
+},
+
+{
+question:"Hvorfor vælger man den mindst aggressive pad først?",
+options:[
+"For at undgå skader",
+"For at spare strøm",
+"For at bruge mere kemi",
+"For at få mere glans"
+],
+correct:0,
+explanation:"Man starter forsigtigt for at beskytte gulvet."
+},
+
+{
+question:"Hvad bruges en kombimaskine til?",
+options:[
+"Skuring og opsugning",
+"Vinduespolering",
+"Afkalkning",
+"Støvsugning af tæpper"
+],
+correct:0,
+explanation:"En kombimaskine kan både skure og opsuge vand."
+},
+
+{
+question:"Hvad betyder excentriske bevægelser?",
+options:[
+"Ujævne cirkulære bevægelser",
+"Kun lige bevægelser",
+"Vibrerende bevægelser",
+"Hoppende bevægelser"
+],
+correct:0,
+explanation:"Excenterbevægelse er en speciel roterende bevægelse."
+},
+
+{
+question:"Hvornår bruges en doodlebug?",
+options:[
+"Kanter og hjørner",
+"Hele gulvet",
+"Vinduer",
+"Tæpper"
+],
+correct:0,
+explanation:"Doodlebug bruges ofte langs kanter og svært tilgængelige steder."
+},
+
+{
+question:"Hvad skal man gøre før maskinen tages i brug?",
+options:[
+"Kontrollere udstyret",
+"Starte direkte",
+"Fylde polish på",
+"Intet"
+],
+correct:0,
+explanation:"Maskinen skal kontrolleres før brug."
+},
+
+{
+question:"Hvad kan ske ved forkert valg af pad?",
+options:[
+"Skader på gulvet",
+"Bedre resultat",
+"Mindre slid",
+"Ingenting"
+],
+correct:0,
+explanation:"En for aggressiv pad kan beskadige overfladen."
+},
+
+{
+question:"Hvad bruges en gulvbehandlingsmaskine til?",
+options:[
+"Skuring og polering",
+"Toiletrengøring",
+"Vinduesvask",
+"Affaldssortering"
+],
+correct:0,
+explanation:"Maskinen bruges ofte ved gulvpleje."
+},
+
+{
+question:"Hvorfor skal rondeller udskiftes?",
+options:[
+"Når de er slidte",
+"Hver time",
+"Aldrig",
+"Kun ved polering"
+],
+correct:0,
+explanation:"Slidte rondeller giver dårligere resultat."
+},
+
+{
+question:"Hvad er vigtigt ved ledninger til maskiner?",
+options:[
+"Undgå snublefare",
+"Gør dem længere",
+"Læg dem i vand",
+"Ingenting"
+],
+correct:0,
+explanation:"Ledninger skal håndteres sikkert."
+},
+
+{
+question:"Hvilken pad er mest aggressiv?",
+options:[
+"Sort",
+"Rød",
+"Hvid",
+"Blå"
+],
+correct:0,
+explanation:"Sort er typisk den groveste pad."
+},
+
+{
+question:"Hvorfor rengøres maskinen efter brug?",
+options:[
+"Forlænge levetiden",
+"Bedre hygiejne",
+"Bedre funktion",
+"Alle ovenstående"
+],
+correct:3,
+explanation:"Vedligeholdelse sikrer drift og levetid."
+},
+
+{
+question:"Hvorfor læse maskinens brugsanvisning?",
+options:[
+"Sikker brug",
+"Korrekt anvendelse",
+"Undgå skader",
+"Alle ovenstående"
+],
+correct:3,
+explanation:"Brugsanvisningen skal altid følges."
+}
+
+],
+
 safety: [],
 ergonomics: [],
 insta: []
