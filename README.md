@@ -27,5 +27,3 @@ Træn til Hovedforløb 2 eksamen som rengøringstekniker.
 - Statistik
 
 ---
-
-Udviklet af Emil 🚀
