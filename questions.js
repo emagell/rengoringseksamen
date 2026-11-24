@@ -4,173 +4,177 @@ chemistry: [
 
 {
 question:"Hvilken pH-værdi er neutral?",
-options:["2","5","7","12"],
+options:["2","5","7","14"],
 correct:2,
 explanation:"Neutral pH er 7."
 },
 
 {
-question:"Hvilket middel bruges typisk mod kalk?",
-options:["Surt","Basisk","Neutralt","Vand"],
+question:"Hvilket middel anvendes typisk mod kalk?",
+options:["Surt","Basisk","Neutralt","Sæbe"],
 correct:0,
 explanation:"Kalk fjernes bedst med sure rengøringsmidler."
 },
 
 {
-question:"Hvorfor doserer man rengøringsmidler korrekt?",
+question:"Hvorfor skal man dosere rengøringsmidler korrekt?",
 options:[
 "For at spare kemi",
 "For at beskytte overflader",
-"For at opnå korrekt rengøring",
+"For at få korrekt rengøring",
 "Alle ovenstående"
 ],
 correct:3,
-explanation:"Korrekt dosering giver den bedste effekt og beskytter miljø og overflader."
+explanation:"Korrekt dosering giver bedst rengøring, beskytter overflader og mindsker miljøpåvirkning."
 },
 
 {
 question:"Hvilken pH har et stærkt basisk middel typisk?",
-options:["1","4","7","11+"],
+options:["2","5","7","11+"],
 correct:3,
 explanation:"Basiske midler ligger over pH 7."
 },
 
 {
-question:"Hvorfor efterskylles et gulv efter afrensning?",
+question:"Hvorfor efterskylles gulvet efter afrensning?",
 options:[
 "For at fjerne sæberester",
 "For at få mere glans",
 "For at tørre hurtigere",
-"For at gøre gulvet glat"
+"For at gøre gulvet glattere"
 ],
 correct:0,
-explanation:"Rester af kemi kan påvirke ny polish."
-}
-
-],
-
-surfaces: [
-
-{
-question:"Hvilket gulv tåler dårligt for meget vand?",
-options:[
-"Linoleum",
-"Klinker",
-"Beton",
-"Stål"
-],
-correct:0,
-explanation:"Linoleum er følsomt overfor store mængder vand."
+explanation:"Kemi skal fjernes før ny behandling."
 },
 
 {
-question:"Hvad bør man være forsigtig med på linoleum?",
+question:"Hvad kan ske ved overdosering af rengøringsmidler?",
 options:[
-"Stærk alkali",
-"Rent vand",
-"Støvsugning",
-"Mikrofiber"
-],
-correct:0,
-explanation:"Stærk alkali kan beskadige linoleum."
-}
-
-],
-
-hygiene: [
-
-{
-question:"Hvorfor arbejder man fra rent mod urent?",
-options:[
-"For at undgå krydssmitte",
-"For at spare tid",
-"For at bruge mindre vand",
-"For at gøre gulvet blankt"
-],
-correct:0,
-explanation:"Man undgår at flytte bakterier og snavs."
-}
-
-],
-
-sanitary: [
-
-{
-question:"Hvad fjernes bedst med surt rengøringsmiddel?",
-options:[
-"Kalk",
-"Støv",
-"Sand",
-"Papir"
-],
-correct:0,
-explanation:"Sure midler bruges mod kalk."
-}
-
-],
-
-machines: [
-
-{
-question:"Hvilken pad vælger man normalt først?",
-options:[
-"Sort",
-"Rød",
-"Ståluld",
-"Brun"
+"Dårlig rengøring",
+"Hinder og rester",
+"Ingenting",
+"Mindre slid"
 ],
 correct:1,
-explanation:"Man starter med den mindst aggressive løsning."
-}
-
-],
-
-safety: [
+explanation:"Overdosering kan efterlade rester og tiltrække snavs."
+},
 
 {
-question:"Hvad skal du læse før brug af et nyt kemikalie?",
+question:"Hvad betyder pH?",
 options:[
-"Sikkerhedsdatablad",
-"Køreplan",
-"Vagtplan",
-"Telefonliste"
+"Potentiale for hydrogen",
+"Power house",
+"Polish hardness",
+"Pressure handling"
 ],
 correct:0,
-explanation:"Sikkerhedsdatabladet beskriver risici og værnemidler."
-}
-
-],
-
-ergonomics: [
+explanation:"pH står for potentiale for hydrogen."
+},
 
 {
-question:"Hvorfor er korrekt skaftlængde vigtig?",
+question:"Hvilket pH-område betragtes som surt?",
 options:[
-"For at skåne kroppen",
-"For at være hurtigere",
-"For at bruge mindre kemi",
-"For at spare strøm"
+"0-6",
+"7",
+"8-14",
+"10-12"
 ],
 correct:0,
-explanation:"Korrekt arbejdsstilling mindsker belastning."
-}
-
-],
-
-insta: [
+explanation:"Alt under 7 er surt."
+},
 
 {
-question:"Hvad bruges INSTA 800 til?",
+question:"Hvilket pH-område betragtes som basisk?",
 options:[
-"Kvalitetsmåling",
-"Løn",
-"Planlægning",
-"Maskinservice"
+"0-6",
+"7",
+"8-14",
+"Kun 14"
+],
+correct:2,
+explanation:"Alt over 7 er basisk."
+},
+
+{
+question:"Hvilken pH-værdi bør gulvet have før polish?",
+options:[
+"3",
+"5",
+"7",
+"12"
+],
+correct:2,
+explanation:"Polish binder bedst ved neutral pH."
+},
+
+{
+question:"Hvorfor skal man læse produktanvisningen?",
+options:[
+"For at følge doseringen",
+"For at bruge korrekt metode",
+"For at kende sikkerheden",
+"Alle ovenstående"
+],
+correct:3,
+explanation:"Produktanvisningen fortæller om brug og sikkerhed."
+},
+
+{
+question:"Hvad sker der ofte ved underdosering?",
+options:[
+"Dårlig effekt",
+"Bedre effekt",
+"Mere glans",
+"Mindre slid"
 ],
 correct:0,
-explanation:"INSTA 800 bruges til kvalitetskontrol af rengøring."
+explanation:"For lidt kemi giver ofte dårlig rengøring."
+},
+
+{
+question:"Hvilken type kemi bruges ofte til grundrengøring?",
+options:[
+"Basisk",
+"Surt",
+"Kun vand",
+"Neutral polish"
+],
+correct:0,
+explanation:"Grundrengøring udføres ofte med basiske midler."
+},
+
+{
+question:"Hvad kan rester af rengøringsmiddel give under polish?",
+options:[
+"Fiskeøjne",
+"Pletter",
+"Dårlig vedhæftning",
+"Alle ovenstående"
+],
+correct:3,
+explanation:"Kemirester giver ofte fejl i polish."
+},
+
+{
+question:"Hvorfor bør man bruge mindst mulig kemi?",
+options:[
+"Miljø",
+"Økonomi",
+"Sikkerhed",
+"Alle ovenstående"
+],
+correct:3,
+explanation:"Mindre kemi er bedre for miljø, økonomi og arbejdsmiljø."
 }
 
-]
+],
+
+surfaces: [],
+hygiene: [],
+sanitary: [],
+machines: [],
+safety: [],
+ergonomics: [],
+insta: []
 
 };
