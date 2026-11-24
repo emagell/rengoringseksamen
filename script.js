@@ -1,27 +1,23 @@
 let currentQuestion = 0;
 let xp = 0;
 
-function loadQuestion(){
+function loadQuestion() {
 
     if(currentQuestion >= questions.length){
 
         document.getElementById("question").innerHTML =
         "🎉 Eksamen færdig!";
 
-        document.getElementById("options").innerHTML =
-        "";
+        document.getElementById("options").innerHTML = "";
 
         document.getElementById("result").innerHTML =
         `Samlet XP: ${xp}`;
 
-        document.getElementById("correctAnswer").innerHTML =
-        "";
+        document.getElementById("correctAnswer").innerHTML = "";
 
-        document.getElementById("explanation").innerHTML =
-        "";
+        document.getElementById("explanation").innerHTML = "";
 
-        document.getElementById("nextButton").style.display =
-        "none";
+        document.getElementById("nextButton").style.display = "none";
 
         return;
     }
@@ -49,8 +45,7 @@ function loadQuestion(){
 
 function checkAnswer(choice){
 
-    const q =
-    questions[currentQuestion];
+    const q = questions[currentQuestion];
 
     const buttons =
     document.querySelectorAll("#options button");
@@ -79,8 +74,7 @@ function checkAnswer(choice){
     document.getElementById("explanation").innerHTML =
     q.explanation;
 
-    document.getElementById("xp").innerHTML =
-    xp;
+    document.getElementById("xp").innerHTML = xp;
 
     document.getElementById("nextButton").style.display =
     "inline-block";
