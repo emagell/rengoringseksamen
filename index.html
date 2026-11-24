@@ -1,37 +1,40 @@
 <!DOCTYPE html>
 <html lang="da">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rengøringstekniker HF2</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <h1>🧹 Rengøringstekniker HF2</h1>
 
 <div class="card">
+
     <h2 id="question"></h2>
 
-    <input
-        type="text"
-        id="answer"
-        placeholder="Dit svar..."
-    >
-
-    <br><br>
-
-    <button onclick="checkAnswer()">
-        Svar
-    </button>
+    <div id="options"></div>
 
     <p id="result"></p>
 
+    <p id="correctAnswer"></p>
+
+    <p id="explanation"></p>
+
+    <button id="nextButton" onclick="nextQuestion()">
+        Næste spørgsmål →
+    </button>
+
     <p>XP: <span id="xp">0</span></p>
+
 </div>
 
 <script src="questions.js"></script>
 <script src="script.js"></script>
 
 </body>
+
 </html>
