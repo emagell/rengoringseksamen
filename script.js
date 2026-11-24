@@ -1,5 +1,7 @@
 let currentQuestion = 0;
-let xp = 0;
+
+let correctAnswers = 0;
+let wrongAnswers = 0;
 
 let selectedQuestions = [];
 let currentCategory = "";
@@ -14,11 +16,11 @@ function startCategory(category){
 
     currentQuestion = 0;
 
+    correctAnswers = 0;
+    wrongAnswers = 0;
+
     document.getElementById("menu").style.display = "none";
-
     document.getElementById("quiz").style.display = "block";
-
-    document.getElementById("xp").innerHTML = xp;
 
     const names = {
 
@@ -88,14 +90,16 @@ function checkAnswer(choice){
     if(choice === q.correct){
 
         document.getElementById("result").innerHTML =
-            "✅ Korrekt (+10 XP)";
+            "✅ Korrekt";
 
-        xp += 10;
+        correctAnswers++;
 
     }else{
 
         document.getElementById("result").innerHTML =
             "❌ Forkert";
+
+        wrongAnswers++;
     }
 
     document.getElementById("correctAnswer").innerHTML =
@@ -104,9 +108,6 @@ function checkAnswer(choice){
 
     document.getElementById("explanation").innerHTML =
         q.explanation;
-
-    document.getElementById("xp").innerHTML =
-        xp;
 
     document.getElementById("nextButton").style.display =
         "inline-block";
@@ -128,22 +129,55 @@ function nextQuestion(){
     loadQuestion();
 }
 
+function calculateGrade(){
+
+    const total = selectedQuestions.length;
+
+    const percent =
+        (correctAnswers / total) * 100;
+
+    if(percent >= 90) return "12";
+
+    if(percent >= 75) return "10";
+
+    if(percent >= 60) return "7";
+
+    if(percent >= 40) return "4";
+
+    return "02";
+}
+
 function showResults(){
 
-    document.getElementById("questionCounter").innerHTML = "";
+    const grade =
+        calculateGrade();
+
+    document.getElementById("questionCounter").innerHTML =
+        "";
 
     document.getElementById("question").innerHTML =
         "🎉 Kategori færdig!";
 
-    document.getElementById("options").innerHTML = "";
+    document.getElementById("options").innerHTML =
+        "";
 
-    document.getElementById("correctAnswer").innerHTML = "";
+    document.getElementById("correctAnswer").innerHTML =
+        "";
 
     document.getElementById("result").innerHTML =
-        `Du har ${xp} XP`;
+
+        `
+        <h2>Resultat</h2>
+
+        <p>✅ Rigtige svar: ${correctAnswers}</p>
+
+        <p>❌ Forkerte svar: ${wrongAnswers}</p>
+
+        <p>🏆 Karakter: ${grade}</p>
+        `;
 
     document.getElementById("explanation").innerHTML =
-        "Godt arbejde!";
+        "";
 
     document.getElementById("nextButton").style.display =
         "none";
@@ -162,4 +196,8 @@ function backToMenu(){
     document.getElementById("correctAnswer").innerHTML = "";
 
     document.getElementById("explanation").innerHTML = "";
+
+    document.getElementById("question").innerHTML = "";
+
+    document.getElementById("options").innerHTML = "";
 }
