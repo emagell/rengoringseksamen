@@ -1,31 +1,60 @@
 let currentQuestion = 0;
 let xp = 0;
 
-function loadQuestion() {
+let selectedQuestions = [];
+let currentCategory = "";
 
-    if(currentQuestion >= questions.length){
+function startCategory(category){
 
-        document.getElementById("question").innerHTML =
-        "🎉 Eksamen færdig!";
+    currentCategory = category;
 
-        document.getElementById("options").innerHTML = "";
+    selectedQuestions = [...categories[category]];
 
-        document.getElementById("result").innerHTML =
-        `Samlet XP: ${xp}`;
+    selectedQuestions.sort(() => Math.random() - 0.5);
 
-        document.getElementById("correctAnswer").innerHTML = "";
+    currentQuestion = 0;
 
-        document.getElementById("explanation").innerHTML = "";
+    document.getElementById("menu").style.display = "none";
 
-        document.getElementById("nextButton").style.display = "none";
+    document.getElementById("quiz").style.display = "block";
+
+    document.getElementById("xp").innerHTML = xp;
+
+    const names = {
+
+        hygiene:"🦠 Rengøringshygiejne",
+        surfaces:"🧽 Overflader & Materialer",
+        chemistry:"🧪 Kemi & pH",
+        sanitary:"🚽 Sanitetsrengøring",
+        machines:"🚜 Maskiner & Pads",
+        safety:"🛡️ Arbejdsmiljø",
+        ergonomics:"💪 Ergonomi",
+        insta:"📋 INSTA 800"
+
+    };
+
+    document.getElementById("categoryTitle").innerHTML =
+        names[category];
+
+    loadQuestion();
+}
+
+function loadQuestion(){
+
+    if(currentQuestion >= selectedQuestions.length){
+
+        showResults();
 
         return;
     }
 
-    const q = questions[currentQuestion];
+    const q = selectedQuestions[currentQuestion];
+
+    document.getElementById("questionCounter").innerHTML =
+        `Spørgsmål ${currentQuestion + 1} / ${selectedQuestions.length}`;
 
     document.getElementById("question").innerHTML =
-    q.question;
+        q.question;
 
     let html = "";
 
@@ -40,44 +69,47 @@ function loadQuestion() {
     });
 
     document.getElementById("options").innerHTML =
-    html;
+        html;
 }
 
 function checkAnswer(choice){
 
-    const q = questions[currentQuestion];
+    const q = selectedQuestions[currentQuestion];
 
     const buttons =
-    document.querySelectorAll("#options button");
+        document.querySelectorAll("#options button");
 
     buttons.forEach(button => {
+
         button.disabled = true;
+
     });
 
     if(choice === q.correct){
 
         document.getElementById("result").innerHTML =
-        "✅ Korrekt! +10 XP";
+            "✅ Korrekt (+10 XP)";
 
         xp += 10;
 
     }else{
 
         document.getElementById("result").innerHTML =
-        "❌ Forkert";
+            "❌ Forkert";
     }
 
     document.getElementById("correctAnswer").innerHTML =
-    "Rigtigt svar: " +
-    q.options[q.correct];
+        "Rigtigt svar: " +
+        q.options[q.correct];
 
     document.getElementById("explanation").innerHTML =
-    q.explanation;
+        q.explanation;
 
-    document.getElementById("xp").innerHTML = xp;
+    document.getElementById("xp").innerHTML =
+        xp;
 
     document.getElementById("nextButton").style.display =
-    "inline-block";
+        "inline-block";
 }
 
 function nextQuestion(){
@@ -91,9 +123,43 @@ function nextQuestion(){
     document.getElementById("explanation").innerHTML = "";
 
     document.getElementById("nextButton").style.display =
-    "none";
+        "none";
 
     loadQuestion();
 }
 
-loadQuestion();
+function showResults(){
+
+    document.getElementById("questionCounter").innerHTML = "";
+
+    document.getElementById("question").innerHTML =
+        "🎉 Kategori færdig!";
+
+    document.getElementById("options").innerHTML = "";
+
+    document.getElementById("correctAnswer").innerHTML = "";
+
+    document.getElementById("result").innerHTML =
+        `Du har ${xp} XP`;
+
+    document.getElementById("explanation").innerHTML =
+        "Godt arbejde!";
+
+    document.getElementById("nextButton").style.display =
+        "none";
+}
+
+function backToMenu(){
+
+    document.getElementById("menu").style.display =
+        "block";
+
+    document.getElementById("quiz").style.display =
+        "none";
+
+    document.getElementById("result").innerHTML = "";
+
+    document.getElementById("correctAnswer").innerHTML = "";
+
+    document.getElementById("explanation").innerHTML = "";
+}
